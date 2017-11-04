@@ -1,0 +1,33 @@
+{
+	"name": "mrlixiansheng/autoapi",
+	"description": "echo hello world",
+	"license": "MIT License",
+	"authors": [
+		{
+			"name": "mrlixiansheng",
+			"email": "778323309@qq.com"
+		}
+	],
+	"minimum-stability": "dev",
+
+	"require": {
+		"illuminate/database": "*",
+		"noahbuscher/macaw": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"admin\\": "admin/",
+			"addon\\": "addon/"
+		}
+	}
+}
+
+
+
+
+
+
+/*
+
+
+*/
