@@ -9,7 +9,6 @@
 		}
 	],
 	"minimum-stability": "dev",
-
 	"require": {
 		"illuminate/database": "*",
 		"noahbuscher/macaw": "dev-master"
@@ -21,13 +20,3 @@
 		}
 	}
 }
-
-
-
-
-
-
-/*
-
-
-*/
