@@ -22,7 +22,9 @@
     },
     "autoload": {
         "psr-4": {
-            "autoapi\\": ""
+            "autoapi\\": "",
+            "admin\\": "../../../admin/",
+            "addon\\": "../../../addon/"
         }
     }
 }
