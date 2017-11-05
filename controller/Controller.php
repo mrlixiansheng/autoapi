@@ -1,5 +1,5 @@
 <?php
-namespace Autoapi;
+namespace autoapi\controller;
 
 class Controller
 {
