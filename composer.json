@@ -1,17 +1,20 @@
 {
     "name": "mrlixiansheng/autoapi",
-    "description": "ssss",
-    "require": {
-        "illuminate/database": "*",
-        "noahbuscher/macaw": "dev-master"
-    },
-    "license": "MIT License",
+    "type": "library",
+    "description": "afdsafsda",
+    "keywords": ["log","logging"],
+    "homepage": "https://github.com/mrlixiansheng/autoapi",
+    "license": "MIT",
     "authors": [
         {
             "name": "mrlixiansheng",
             "email": "778323309@qq.com"
         }
     ],
+    "require": {
+        "illuminate/database": "*",
+        "noahbuscher/macaw": "dev-master"
+    },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
