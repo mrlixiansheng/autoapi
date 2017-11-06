@@ -18,12 +18,11 @@ class Error
     }
 
     public static function appException($e){
-
+        new Abort($e);
     }
 
     public static function appError($errno, $errstr, $errfile = '', $errline = 0, $errcontext = []){
-
-
+        new Abort($errfile,$errline,$errno);
     }
 
 
