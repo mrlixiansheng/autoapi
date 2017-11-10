@@ -1,6 +1,6 @@
 <?php
 
-namespace autoapi\web;
+namespace autoapi\route;
 
 
 use autoapi\domain\RouteDo;
@@ -15,9 +15,11 @@ class Application
     function __construct($config = [])
     {
         $flow=new RouteDo();
-        $flow->admin($this);
-
-        $flow->addon($this);
+        $flow->getParams($this);
+        $flow->uriToArray($this);
+        $flow->routes($this);
+        $flow->defaultRoute($this);
+        $flow->getControllerPath($this);
         $flow->reflect($this);
     }
 

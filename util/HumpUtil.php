@@ -4,7 +4,7 @@ namespace autoapi\util;
 class HumpUtil
 {
     //下划线转驼峰
-    public function convertUnderline($str)
+    public function lineToHump(&$str)
     {
         $str = preg_replace_callback('/([-_]+([a-z]{1}))/i',function($matches){
             return strtoupper($matches[2]);
@@ -13,7 +13,7 @@ class HumpUtil
     }
 
     // 驼峰转下划线
-    public function humpToLine($str){
+    public function humpToLine(&$str){
         $str = preg_replace_callback('/([A-Z]{1})/',function($matches){
             return '-'.strtolower($matches[0]);
         },$str);
@@ -22,8 +22,13 @@ class HumpUtil
 
     public function convertHump(array $data){
         $result = [];
-        foreach ($data as $key => $item) (is_array($item) || is_object($item))?$result[$this->humpToLine($key)] = $this->convertHump((array)$item):$result[$this->humpToLine($key)] = $item;
-
+        foreach ($data as $key => $item){
+            $result[$this->humpToLine($key)] =(is_array($item) || is_object($item))? $this->convertHump((array)$item): $item;
+        }
         return $result;
+    }
+
+    function arrayToHump(&$data){
+        foreach ($data as $key => $v) $data[$key] =$this->lineToHump($v);
     }
 }

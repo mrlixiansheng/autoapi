@@ -20,6 +20,7 @@ class Controller
         require_once $filePath;
     }
 
+
     function createView($dirname,$filePath,$createDir=true){
         if ($createDir){
             $f= new FileUtil();
